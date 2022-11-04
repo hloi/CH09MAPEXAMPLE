@@ -10,15 +10,15 @@
 
 class Phone_Directory {
 public:
-    Phone_Directory();
-    ~Phone_Directory();
+    Phone_Directory() {}
+    ~Phone_Directory() {}
     void load_data(const std::string source_name);
-    std::string lookup_entry(const::string& name) const;
+    std::string lookup_entry(const std::string& name) const;
     std::string add_or_change_entry(const std::string& name,
                                     const std::string& number);
     std::string remove_entry(const std::string & name);
     void save();
-
+    void print();
 private:
     typedef std::map< std::string, std::string >::iterator iterator;
     typedef std::map< std::string, std::string >::const_iterator const_iterator;
